@@ -2167,27 +2167,30 @@
       /* ---------------------------- Visitor counter ------------------------------ */
       async function getVisitorCount() {
         try {
-          // Uses CounterAPI which automatically initializes and provides JSON tracking
+          // Switched to CountAPI, a highly stable zero-config JSON tracker
           const res = await fetch(
-            "https://api.counterapi.dev/v1/pawandake/portfolio/up",
+            "https://api.countapi.xyz/hit/pawandake.netlify.app/visits",
           );
           if (res.ok) {
             const data = await res.json();
-            return { count: data.count, isLive: true };
+            // CountAPI returns the number inside a 'value' property
+            return { count: data.value, isLive: true };
           }
         } catch (err) {
-          console.warn("Live API blocked by network. Using local progression.");
+          console.warn(
+            "Live API blocked by ad-blocker or unavailable. Using local progression.",
+          );
         }
 
-        // Dummy data explicitly removed. Now correctly starts at 0 if falling back offline.
+        // Changed the storage key to force the browser to forget the old 24084 dummy data
         let localCount = Number(
-          localStorage.getItem("pd-fallback-counter") || 0,
+          localStorage.getItem("pawan-offline-counter-v2") || 0,
         );
 
-        if (!sessionStorage.getItem("pd-session-counted")) {
+        if (!sessionStorage.getItem("pawan-session-counted-v2")) {
           localCount += 1;
-          localStorage.setItem("pd-fallback-counter", localCount);
-          sessionStorage.setItem("pd-session-counted", "true");
+          localStorage.setItem("pawan-offline-counter-v2", localCount);
+          sessionStorage.setItem("pawan-session-counted-v2", "true");
         }
 
         return { count: localCount, isLive: false };
