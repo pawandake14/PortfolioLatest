@@ -2203,8 +2203,10 @@
          ---------------------------------------------------------------------- */
       async function getVisitorCount() {
         try {
-          // hits.sh requires a domain format. Replace pawandake.tech with your actual custom domain.
-          const res = await fetch("https://pawan-dake.netlify.app");
+          // Appends your specific domain to the hits.sh tracking API
+          const res = await fetch(
+            "https://hits.sh/pawan-dake.netlify.app.json",
+          );
           if (res.ok) {
             const data = await res.json();
             return { count: data.count, isLive: true };
