@@ -31,7 +31,7 @@
       content="Portfolio of Pawan K. Dake, a Computer Science student and Software Developer focused on Java, DSA, Full Stack Development and real-world applications."
     />
 
-    <!-- Favicon (inline SVG data URI — no external file needed) -->
+    <!-- Favicon -->
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230D1324'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='20' font-weight='700' fill='%238B5CF6' text-anchor='middle'%3EP.D%3C/text%3E%3C/svg%3E"
@@ -45,10 +45,10 @@
       rel="stylesheet"
     />
 
-    <!-- Icons (Iconify: lucide = UI icons, logos = brand/tech logos) -->
+    <!-- Icons -->
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 
-    <!-- Tailwind (browser build) -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -224,7 +224,7 @@
         }
       }
 
-      /* Scroll-reveal (vanilla JS driven) */
+      /* Scroll-reveal */
       [data-reveal] {
         opacity: 0;
         transform: translateY(24px);
@@ -298,7 +298,6 @@
       >Skip to content</a
     >
 
-    <!-- Scroll progress -->
     <div
       id="scroll-progress"
       class="fixed left-0 top-0 z-[60] h-[3px] w-0 origin-left bg-purple-blue-gradient"
@@ -511,7 +510,7 @@
             <h1
               class="mt-5 text-4xl font-bold leading-tight text-text-primary sm:text-5xl md:text-6xl"
             >
-              Pawana K. Dake
+              Pawan K. Dake
             </h1>
             <p
               class="gradient-text mt-2 text-2xl font-bold sm:text-3xl md:text-4xl"
@@ -1231,7 +1230,6 @@
                         </p>
                       </div>
                     </div>
-
                     <span class="badge">3 Months</span>
                   </div>
                   <p
@@ -1413,7 +1411,6 @@
             <span class="section-heading">RECOGNITION</span>
             <h2 class="section-title">Achievements & Extra</h2>
           </div>
-
           <div
             class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
             id="achievements-grid"
@@ -1451,14 +1448,14 @@
                   I'm always open to discussing new projects, creative ideas and
                   opportunities to build meaningful software.
                 </p>
-                <a id="contact-email-link" href="#" class="btn-primary mt-8"
-                  >Contact Me
+                <a id="contact-email-link" href="#" class="btn-primary mt-8">
+                  Contact Me
                   <iconify-icon
                     icon="lucide:arrow-right"
                     width="16"
                     height="16"
-                  ></iconify-icon
-                ></a>
+                  ></iconify-icon>
+                </a>
               </div>
 
               <div
@@ -1613,9 +1610,7 @@
 
     <script>
       /* =========================================================================
-         CONFIG — edit these values. No build step required; everything reads
-         from this single object. Leave a field empty ("") to have the UI show
-         a graceful "coming soon" state instead of a fake link.
+         CONFIG
          ========================================================================= */
       const CONFIG = {
         social: {
@@ -1636,11 +1631,8 @@
             github: "https://github.com/pawandake14/V2V-Intern-Projects.git",
           },
           weChat: { live: "", github: "" },
-          taskManager: { github: "" }, // no live demo — In Progress
+          taskManager: { github: "" },
         },
-        // Optional Supabase-backed visitor counter (see notes near getVisitorCount()).
-        // Leave both empty to use a graceful local-only fallback.
-        supabase: { url: "", anonKey: "" },
       };
 
       /* ---------------------------- Utilities -------------------------------- */
@@ -1798,7 +1790,7 @@
         {
           name: "GitHub",
           href: CONFIG.social.github,
-          icon: "lucide:github", // <-- Changed from logos:github-icon
+          icon: "mdi:github", // <-- Fixed to a solid, theme-responsive icon
           external: true,
         },
         {
@@ -1807,11 +1799,10 @@
           icon: "logos:linkedin-icon",
           external: true,
         },
-
         {
           name: "LeetCode",
           href: CONFIG.social.leetcode,
-          icon: "simple-icons:leetcode", // <-- Updated from logos:leetcode
+          icon: "simple-icons:leetcode",
           external: true,
         },
         {
@@ -1977,9 +1968,12 @@
                 : p.live
                   ? `<a href="${p.live}" target="_blank" rel="noopener noreferrer" class="btn-primary flex-1 !py-2.5 text-xs sm:flex-none sm:text-sm">Live Demo <iconify-icon icon="lucide:external-link" width="14" height="14"></iconify-icon></a>`
                   : `<span class="btn-secondary flex-1 cursor-not-allowed opacity-50 !py-2.5 text-xs sm:flex-none sm:text-sm" title="Live demo not available yet">Live Demo <iconify-icon icon="lucide:external-link" width="14" height="14"></iconify-icon></span>`;
+
+            // Fixed GitHub icon class here to inherit text color
             const githubBtn = p.github
-              ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} GitHub repository" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-card/60 text-text-secondary transition-all hover:border-border-hover hover:text-white"><iconify-icon icon="lucide:github" width="18" height="18"></iconify-icon></a>`
-              : `<span aria-label="GitHub repository coming soon" title="Repository coming soon" class="flex h-10 w-10 shrink-0 cursor-not-allowed items-center justify-center rounded-full border border-border bg-card/40 text-text-muted opacity-60"><iconify-icon icon="lucide:github" width="18" height="18"></iconify-icon></span>`;
+              ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} GitHub repository" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-card/60 text-text-secondary transition-all hover:border-border-hover hover:text-text-primary"><iconify-icon icon="mdi:github" width="20" height="20"></iconify-icon></a>`
+              : `<span aria-label="GitHub repository coming soon" title="Repository coming soon" class="flex h-10 w-10 shrink-0 cursor-not-allowed items-center justify-center rounded-full border border-border bg-card/40 text-text-muted opacity-60"><iconify-icon icon="mdi:github" width="20" height="20"></iconify-icon></span>`;
+
             return `<article data-reveal data-reveal-delay="${i % 2}" class="project-card group card-base overflow-hidden">
               <div class="relative aspect-[16/9] overflow-hidden border-b border-border">${mockupSVG(p)}${statusBadge}</div>
               <div class="p-6 sm:p-7">
@@ -1992,7 +1986,6 @@
           })
           .join("");
 
-        // This is the added line that registers the new project elements with the intersection observer
         grid
           .querySelectorAll("[data-reveal]")
           .forEach((el) => revealObserver.observe(el));
@@ -2072,7 +2065,7 @@
           title: "Tools",
           skills: [
             { name: "Git", icon: "logos:git-icon" },
-            { name: "GitHub", icon: "logos:github-icon" },
+            { name: "GitHub", icon: "mdi:github" }, // <-- Updated to solid icon
             { name: "VS Code", icon: "logos:visual-studio-code" },
             { name: "IntelliJ IDEA", icon: "logos:intellij-idea" },
             { name: "Android Studio", icon: "logos:android-icon" },
@@ -2096,7 +2089,7 @@
                     (
                       s,
                     ) => `<div data-reveal title="${s.note ? s.name + " — " + s.note : s.name}" class="group flex items-center gap-3 rounded-xl border ${s.featured ? "border-purple/50 shadow-glow" : "border-border"} bg-card/60 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:shadow-glow">
-                      <iconify-icon icon="${s.icon}" width="20" height="20" class="shrink-0"></iconify-icon>
+                      <iconify-icon icon="${s.icon}" width="20" height="20" class="shrink-0 text-text-secondary group-hover:text-text-primary transition-colors"></iconify-icon>
                       <div class="min-w-0">
                         <p class="truncate text-sm font-medium ${s.featured ? "text-text-primary font-semibold" : "text-text-secondary group-hover:text-text-primary"}">${s.name}</p>
                         ${s.note ? `<p class="truncate text-[10px] font-medium text-cyan">${s.note}</p>` : ""}
@@ -2124,7 +2117,7 @@
           href: null,
         },
         {
-          icon: "simple-icons:leetcode", // <-- Updated from logos:leetcode
+          icon: "simple-icons:leetcode",
           eyebrow: "LeetCode",
           value: "Problem",
           label: "Solver",
@@ -2171,41 +2164,12 @@
       }
       renderAchievements();
 
-      /* ---------------------------- Visitor counter ------------------------------
-         Backend-ready: if CONFIG.supabase.url/anonKey are set, this calls a
-         Postgres RPC to atomically increment a persistent counter (once per 24h
-         per browser, tracked via localStorage — no refresh-spam). Without those
-         values it falls back to a local, non-persistent counter so the UI still
-         works, and clearly shows "Offline count" instead of a fake "Live" badge.
-
-         ONE-TIME SUPABASE SETUP
-         1. Create a free project at https://supabase.com
-         2. Run in the SQL editor:
-             create table if not exists visitor_stats (
-               id int primary key default 1,
-               count bigint not null default 0,
-               constraint single_row check (id = 1)
-             );
-             insert into visitor_stats (id, count) values (1, 0) on conflict (id) do nothing;
-
-             create or replace function increment_visitor_count()
-             returns bigint language plpgsql as $$
-             declare new_count bigint;
-             begin
-               update visitor_stats set count = count + 1 where id = 1 returning count into new_count;
-               return new_count;
-             end; $$;
-
-             alter table visitor_stats enable row level security;
-             create policy "Public read" on visitor_stats for select using (true);
-             grant execute on function increment_visitor_count() to anon;
-         3. Paste your Project URL + anon public key into CONFIG.supabase above.
-         ---------------------------------------------------------------------- */
+      /* ---------------------------- Visitor counter ------------------------------ */
       async function getVisitorCount() {
         try {
-          // Appends your specific domain to the hits.sh tracking API
+          // Uses CounterAPI which automatically initializes and provides JSON tracking
           const res = await fetch(
-            "https://hits.sh/pawan-dake.netlify.app.json",
+            "https://api.counterapi.dev/v1/pawandake/portfolio/up",
           );
           if (res.ok) {
             const data = await res.json();
@@ -2215,13 +2179,13 @@
           console.warn("Live API blocked by network. Using local progression.");
         }
 
-        // Seamless fallback if the network is strictly restricted
+        // Dummy data explicitly removed. Now correctly starts at 0 if falling back offline.
         let localCount = Number(
-          localStorage.getItem("pd-fallback-counter") || 24081,
+          localStorage.getItem("pd-fallback-counter") || 0,
         );
 
         if (!sessionStorage.getItem("pd-session-counted")) {
-          localCount += Math.floor(Math.random() * 3) + 1;
+          localCount += 1;
           localStorage.setItem("pd-fallback-counter", localCount);
           sessionStorage.setItem("pd-session-counted", "true");
         }
@@ -2243,12 +2207,14 @@
 
         const { count, isLive } = await getVisitorCount();
         const digits = String(count).padStart(6, "0").split("");
+
         digitsEl.innerHTML = digits
           .map(
             (d, i) =>
               `<span class="flex h-8 w-6 items-center justify-center rounded-md border border-border bg-card font-mono text-sm font-bold text-text-primary shadow-glow" style="animation: fade-in .3s ease ${i * 0.04}s both;">${d}</span>`,
           )
           .join("");
+
         dot.className =
           "h-1.5 w-1.5 rounded-full " +
           (isLive ? "bg-cyan animate-blink" : "bg-text-muted");
@@ -2256,7 +2222,7 @@
       }
       renderVisitorCounter();
 
-      /* ---------------------------- Command palette (Cmd/Ctrl+K) ----------------- */
+      /* ---------------------------- Command palette ------------------------------ */
       const commandList = [
         {
           label: "Go to Projects",
@@ -2281,9 +2247,9 @@
         },
         {
           label: "GitHub",
-          icon: "lucide:github", // <-- Changed from logos:github-icon
+          icon: "mdi:github",
           action: () => window.open(CONFIG.social.github, "_blank"),
-        },
+        }, // <-- Fixed to solid icon
         {
           label: "LinkedIn",
           icon: "logos:linkedin-icon",
@@ -2291,10 +2257,11 @@
         },
         {
           label: "LeetCode",
-          icon: "simple-icons:leetcode", // <-- This was still set to logos:leetcode
+          icon: "simple-icons:leetcode",
           action: () => window.open(CONFIG.social.leetcode, "_blank"),
-        },
+        }, // <-- Fixed Leetcode
       ];
+
       function renderCommandList() {
         document.getElementById("command-list").innerHTML = commandList
           .map(
@@ -2306,6 +2273,7 @@
             </button></li>`,
           )
           .join("");
+
         document.querySelectorAll("[data-cmd-index]").forEach((btn) => {
           btn.addEventListener("click", () => {
             commandList[Number(btn.dataset.cmdIndex)].action();
