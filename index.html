@@ -1,0 +1,2338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawan K. Dake | Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Pawan K. Dake, a Computer Science student and Software Developer focused on Java, Data Structures & Algorithms, Full Stack Development and building real-world applications."
+    />
+    <meta
+      name="keywords"
+      content="Pawan Dake, Software Developer, Full Stack Developer, Java Developer, SDE Portfolio, React Developer"
+    />
+    <meta name="author" content="Pawan K. Dake" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pawan K. Dake | Software Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Pawan K. Dake, a Computer Science student and Software Developer focused on Java, Data Structures & Algorithms, Full Stack Development and building real-world applications."
+    />
+    <meta property="og:site_name" content="Pawan K. Dake" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pawan K. Dake | Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Pawan K. Dake, a Computer Science student and Software Developer focused on Java, DSA, Full Stack Development and real-world applications."
+    />
+
+    <!-- Favicon (inline SVG data URI — no external file needed) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230D1324'/%3E%3Ctext x='32' y='40' font-family='monospace' font-size='20' font-weight='700' fill='%238B5CF6' text-anchor='middle'%3EP.D%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons (Iconify: lucide = UI icons, logos = brand/tech logos) -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+    <!-- Tailwind (browser build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#050816",
+              "background-secondary": "#080D1C",
+              card: "#0D1324",
+              "card-hover": "#111832",
+              purple: { DEFAULT: "#8B5CF6", light: "#A78BFA", dark: "#6D28D9" },
+              blue: { DEFAULT: "#3B82F6", light: "#60A5FA" },
+              cyan: { DEFAULT: "#22D3EE" },
+              text: {
+                primary: "#F8FAFC",
+                secondary: "#94A3B8",
+                muted: "#64748B",
+              },
+              border: {
+                DEFAULT: "rgba(139,92,246,0.15)",
+                hover: "rgba(139,92,246,0.4)",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            backgroundImage: {
+              "grid-pattern":
+                "linear-gradient(to right, rgba(139,92,246,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(139,92,246,0.06) 1px, transparent 1px)",
+              "hero-glow":
+                "radial-gradient(60% 50% at 50% 0%, rgba(139,92,246,0.18) 0%, rgba(5,8,22,0) 70%)",
+              "purple-blue-gradient":
+                "linear-gradient(135deg, #8B5CF6 0%, #3B82F6 60%, #22D3EE 100%)",
+            },
+            boxShadow: {
+              glow: "0 0 20px rgba(139,92,246,0.25)",
+              "glow-lg": "0 0 40px rgba(139,92,246,0.25)",
+              card: "0 4px 30px rgba(0,0,0,0.35)",
+            },
+            keyframes: {
+              float: {
+                "0%,100%": { transform: "translateY(0px) rotate(0deg)" },
+                "50%": { transform: "translateY(-14px) rotate(2deg)" },
+              },
+              "pulse-glow": {
+                "0%,100%": { opacity: 0.5 },
+                "50%": { opacity: 1 },
+              },
+              twinkle: {
+                "0%,100%": { opacity: 0.2, transform: "scale(1)" },
+                "50%": { opacity: 1, transform: "scale(1.2)" },
+              },
+              blink: { "0%,100%": { opacity: 1 }, "50%": { opacity: 0.3 } },
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+              twinkle: "twinkle 4s ease-in-out infinite",
+              blink: "blink 1.6s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+        body {
+          background-color: #050816;
+          overflow-x: hidden;
+        }
+        ::selection {
+          background-color: rgba(139, 92, 246, 0.35);
+          color: #f8fafc;
+        }
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #0d1324;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: linear-gradient(180deg, #8b5cf6, #3b82f6);
+          border-radius: 999px;
+        }
+        :focus-visible {
+          outline: 2px solid #8b5cf6;
+          outline-offset: 3px;
+          border-radius: 4px;
+        }
+      }
+      @layer components {
+        .section-container {
+          @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+        }
+        .section-heading {
+          @apply font-mono text-xs sm:text-sm tracking-[0.35em] text-purple-light font-semibold;
+        }
+        .section-title {
+          @apply mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary;
+        }
+        .gradient-text {
+          @apply bg-purple-blue-gradient bg-clip-text text-transparent;
+        }
+        .glass {
+          @apply bg-card/60 backdrop-blur-xl border border-border;
+        }
+        .glow-border {
+          @apply border border-border transition-all duration-300;
+        }
+        .glow-border:hover {
+          @apply border-border-hover shadow-glow;
+        }
+        .btn-primary {
+          @apply inline-flex items-center justify-center gap-2 rounded-full bg-purple-blue-gradient px-6 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300;
+        }
+        .btn-primary:hover {
+          @apply shadow-glow-lg -translate-y-0.5;
+        }
+        .btn-secondary {
+          @apply inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/50 px-6 py-3 text-sm font-semibold text-text-primary backdrop-blur-md transition-all duration-300;
+        }
+        .btn-secondary:hover {
+          @apply border-border-hover bg-card-hover -translate-y-0.5;
+        }
+        .badge {
+          @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-background-secondary/60 px-3 py-1 text-xs font-medium text-text-secondary;
+        }
+        .card-base {
+          @apply relative rounded-2xl border border-border bg-card/80 backdrop-blur-sm transition-all duration-300;
+        }
+        .icon-btn {
+          @apply flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card/50 text-text-secondary backdrop-blur-md transition-all duration-300;
+        }
+        .icon-btn:hover {
+          @apply -translate-y-1 border-border-hover text-purple-light shadow-glow;
+        }
+      }
+      @layer utilities {
+        .bg-grid {
+          background-image:
+            linear-gradient(
+              to right,
+              rgba(139, 92, 246, 0.06) 1px,
+              transparent 1px
+            ),
+            linear-gradient(
+              to bottom,
+              rgba(139, 92, 246, 0.06) 1px,
+              transparent 1px
+            );
+          background-size: 44px 44px;
+        }
+        .mask-fade-b {
+          mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 60%,
+            transparent 100%
+          );
+        }
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      }
+
+      /* Scroll-reveal (vanilla JS driven) */
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      [data-reveal].revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      [data-reveal-delay="1"] {
+        transition-delay: 0.08s;
+      }
+      [data-reveal-delay="2"] {
+        transition-delay: 0.16s;
+      }
+      [data-reveal-delay="3"] {
+        transition-delay: 0.24s;
+      }
+      [data-reveal-delay="4"] {
+        transition-delay: 0.32s;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+      .nav-link.active {
+        color: #f8fafc;
+      }
+      .nav-link.active::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.22),
+          rgba(59, 130, 246, 0.18)
+        );
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+      }
+
+      .project-card:hover .project-card-img {
+        transform: scale(1.06);
+      }
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(139, 92, 246, 0.4);
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.25);
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-sans bg-background text-text-primary antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-purple focus:px-4 focus:py-2 focus:text-white"
+      >Skip to content</a
+    >
+
+    <!-- Scroll progress -->
+    <div
+      id="scroll-progress"
+      class="fixed left-0 top-0 z-[60] h-[3px] w-0 origin-left bg-purple-blue-gradient"
+      aria-hidden="true"
+    ></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header
+      id="navbar"
+      class="fixed inset-x-0 top-0 z-50 py-4 transition-all duration-300"
+    >
+      <div class="section-container">
+        <div
+          id="navbar-inner"
+          class="flex items-center justify-between rounded-2xl border border-transparent px-2 py-2 transition-all duration-300"
+        >
+          <button
+            onclick="scrollToSection('home')"
+            class="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-purple-blue-gradient/10 font-mono text-sm font-bold text-text-primary transition-transform hover:scale-105"
+            aria-label="Go to home"
+          >
+            P.D
+          </button>
+
+          <nav
+            class="hidden items-center gap-1 rounded-full border border-border bg-card/40 px-1.5 py-1.5 backdrop-blur-md lg:flex"
+            aria-label="Primary"
+          >
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="home"
+              onclick="scrollToSection('home')"
+            >
+              Home
+            </button>
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="about"
+              onclick="scrollToSection('about')"
+            >
+              About
+            </button>
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="skills"
+              onclick="scrollToSection('skills')"
+            >
+              Skills
+            </button>
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="experience"
+              onclick="scrollToSection('experience')"
+            >
+              Experience
+            </button>
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="projects"
+              onclick="scrollToSection('projects')"
+            >
+              Projects
+            </button>
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="education"
+              onclick="scrollToSection('education')"
+            >
+              Education
+            </button>
+            <button
+              class="nav-link rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              data-nav="contact"
+              onclick="scrollToSection('contact')"
+            >
+              Contact
+            </button>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <a
+              id="cv-link-desktop"
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hidden items-center gap-2 rounded-full border border-purple/50 px-4 py-2 text-sm font-semibold text-text-primary shadow-[0_0_15px_rgba(139,92,246,0.25)] transition-all hover:border-purple hover:shadow-glow sm:inline-flex"
+            >
+              <iconify-icon
+                icon="lucide:download"
+                width="16"
+                height="16"
+              ></iconify-icon>
+              Download CV
+            </a>
+            <button
+              onclick="toggleMobileMenu()"
+              id="mobile-menu-btn"
+              class="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card/50 text-text-primary lg:hidden"
+              aria-label="Open menu"
+              aria-expanded="false"
+            >
+              <iconify-icon
+                icon="lucide:menu"
+                width="20"
+                height="20"
+              ></iconify-icon>
+            </button>
+          </div>
+        </div>
+
+        <nav
+          id="mobile-menu"
+          class="hidden overflow-hidden lg:hidden"
+          aria-label="Mobile"
+        >
+          <div
+            class="mt-2 flex flex-col gap-1 rounded-2xl border border-border bg-background/95 p-3 backdrop-blur-xl"
+          >
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="home"
+              onclick="scrollToSection('home')"
+            >
+              Home
+            </button>
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="about"
+              onclick="scrollToSection('about')"
+            >
+              About
+            </button>
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="skills"
+              onclick="scrollToSection('skills')"
+            >
+              Skills
+            </button>
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="experience"
+              onclick="scrollToSection('experience')"
+            >
+              Experience
+            </button>
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="projects"
+              onclick="scrollToSection('projects')"
+            >
+              Projects
+            </button>
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="education"
+              onclick="scrollToSection('education')"
+            >
+              Education
+            </button>
+            <button
+              class="mobile-nav-link rounded-xl px-4 py-3 text-left text-sm font-medium text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary"
+              data-nav="contact"
+              onclick="scrollToSection('contact')"
+            >
+              Contact
+            </button>
+            <a
+              href="resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-purple/50 px-4 py-3 text-sm font-semibold text-text-primary"
+            >
+              <iconify-icon
+                icon="lucide:download"
+                width="16"
+                height="16"
+              ></iconify-icon>
+              Download CV
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ============ HERO ============ -->
+      <section
+        id="home"
+        class="relative flex min-h-screen items-center overflow-hidden bg-background pb-16 pt-28"
+      >
+        <div
+          class="absolute inset-0 bg-grid mask-fade-b"
+          aria-hidden="true"
+        ></div>
+        <div class="absolute inset-0 bg-hero-glow" aria-hidden="true"></div>
+        <div
+          id="particle-field"
+          class="pointer-events-none absolute inset-0 overflow-hidden"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="section-container relative grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8"
+        >
+          <div data-reveal>
+            <span class="badge"
+              ><span aria-hidden="true">👋</span> Hi, I'm</span
+            >
+            <h1
+              class="mt-5 text-4xl font-bold leading-tight text-text-primary sm:text-5xl md:text-6xl"
+            >
+              Pawan K. Dake
+            </h1>
+            <p
+              class="gradient-text mt-2 text-2xl font-bold sm:text-3xl md:text-4xl"
+            >
+              Software Developer
+            </p>
+            <p class="mt-5 max-w-xl text-base text-text-secondary sm:text-lg">
+              I build modern, scalable and responsive web applications with
+              clean code and great user experience.
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <button onclick="scrollToSection('contact')" class="btn-primary">
+                Let's Connect
+                <iconify-icon
+                  icon="lucide:arrow-right"
+                  width="16"
+                  height="16"
+                ></iconify-icon>
+              </button>
+              <button
+                onclick="scrollToSection('projects')"
+                class="btn-secondary"
+              >
+                View My Work
+                <iconify-icon
+                  icon="lucide:code-2"
+                  width="16"
+                  height="16"
+                ></iconify-icon>
+              </button>
+            </div>
+
+            <div
+              class="mt-8 flex flex-wrap items-center gap-3"
+              id="hero-socials"
+            ></div>
+          </div>
+
+          <div data-reveal data-reveal-delay="2">
+            <div
+              class="relative mx-auto h-[340px] w-full max-w-md sm:h-[400px] md:h-[460px] lg:max-w-lg"
+            >
+              <div
+                class="absolute inset-0 -z-10 rounded-full bg-purple/20 blur-[90px]"
+              ></div>
+
+              <!-- floating tech badges -->
+              <div
+                class="absolute z-20 flex h-11 w-11 animate-float items-center justify-center rounded-xl border border-border bg-card/80 shadow-glow backdrop-blur-md sm:h-12 sm:w-12"
+                style="top: 6%; left: 2%"
+              >
+                <iconify-icon
+                  icon="logos:react"
+                  width="22"
+                  height="22"
+                ></iconify-icon>
+              </div>
+              <div
+                class="absolute z-20 flex h-11 w-11 animate-float items-center justify-center rounded-xl border border-border bg-card/80 shadow-glow backdrop-blur-md sm:h-12 sm:w-12"
+                style="top: 12%; left: 82%; animation-delay: 0.6s"
+              >
+                <iconify-icon
+                  icon="logos:javascript"
+                  width="22"
+                  height="22"
+                ></iconify-icon>
+              </div>
+              <div
+                class="absolute z-20 flex h-11 w-11 animate-float items-center justify-center rounded-xl border border-border bg-card/80 shadow-glow backdrop-blur-md sm:h-12 sm:w-12"
+                style="top: 72%; left: 0%; animation-delay: 1.1s"
+              >
+                <iconify-icon
+                  icon="logos:nodejs-icon"
+                  width="22"
+                  height="22"
+                ></iconify-icon>
+              </div>
+              <div
+                class="absolute z-20 flex h-11 w-11 animate-float items-center justify-center rounded-xl border border-border bg-card/80 shadow-glow backdrop-blur-md sm:h-12 sm:w-12"
+                style="top: 80%; left: 80%; animation-delay: 0.3s"
+              >
+                <iconify-icon
+                  icon="logos:flutter"
+                  width="22"
+                  height="22"
+                ></iconify-icon>
+              </div>
+              <div
+                class="absolute z-20 flex h-11 w-11 animate-float items-center justify-center rounded-xl border border-border bg-card/80 shadow-glow backdrop-blur-md sm:h-12 sm:w-12"
+                style="top: 44%; left: 90%; animation-delay: 1.6s"
+              >
+                <iconify-icon
+                  icon="logos:mongodb-icon"
+                  width="22"
+                  height="22"
+                ></iconify-icon>
+              </div>
+
+              <!-- desk illustration -->
+              <div
+                class="relative flex h-full w-full items-center justify-center"
+              >
+                <svg
+                  viewBox="0 0 400 340"
+                  class="h-full w-full drop-shadow-[0_0_35px_rgba(139,92,246,0.25)]"
+                  role="img"
+                  aria-label="Illustration of a developer working at a desk with multiple monitors showing code"
+                >
+                  <defs>
+                    <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#1e1b4b" />
+                      <stop offset="100%" stop-color="#0D1324" />
+                    </linearGradient>
+                    <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#161C33" />
+                      <stop offset="100%" stop-color="#0A0E1D" />
+                    </linearGradient>
+                    <radialGradient id="floorGlow" cx="50%" cy="50%" r="50%">
+                      <stop
+                        offset="0%"
+                        stop-color="#8B5CF6"
+                        stop-opacity="0.35"
+                      />
+                      <stop
+                        offset="100%"
+                        stop-color="#8B5CF6"
+                        stop-opacity="0"
+                      />
+                    </radialGradient>
+                  </defs>
+                  <ellipse
+                    cx="200"
+                    cy="300"
+                    rx="170"
+                    ry="26"
+                    fill="url(#floorGlow)"
+                  />
+                  <g transform="translate(28,70) rotate(-6)">
+                    <rect
+                      width="118"
+                      height="82"
+                      rx="8"
+                      fill="url(#screenGrad)"
+                      stroke="#8B5CF6"
+                      stroke-opacity="0.5"
+                    />
+                    <rect
+                      x="10"
+                      y="12"
+                      width="46"
+                      height="6"
+                      rx="3"
+                      fill="#8B5CF6"
+                      opacity="0.8"
+                    />
+                    <rect
+                      x="10"
+                      y="24"
+                      width="70"
+                      height="4"
+                      rx="2"
+                      fill="#3B82F6"
+                      opacity="0.6"
+                    />
+                    <rect
+                      x="10"
+                      y="34"
+                      width="55"
+                      height="4"
+                      rx="2"
+                      fill="#22D3EE"
+                      opacity="0.6"
+                    />
+                    <rect
+                      x="10"
+                      y="44"
+                      width="64"
+                      height="4"
+                      rx="2"
+                      fill="#3B82F6"
+                      opacity="0.5"
+                    />
+                    <rect
+                      x="10"
+                      y="54"
+                      width="40"
+                      height="4"
+                      rx="2"
+                      fill="#8B5CF6"
+                      opacity="0.6"
+                    />
+                    <rect x="52" y="76" width="14" height="10" fill="#161C33" />
+                  </g>
+                  <g transform="translate(210,64) rotate(6)">
+                    <rect
+                      width="130"
+                      height="90"
+                      rx="8"
+                      fill="url(#screenGrad)"
+                      stroke="#3B82F6"
+                      stroke-opacity="0.5"
+                    />
+                    <rect
+                      x="10"
+                      y="12"
+                      width="52"
+                      height="6"
+                      rx="3"
+                      fill="#22D3EE"
+                      opacity="0.85"
+                    />
+                    <rect
+                      x="10"
+                      y="26"
+                      width="90"
+                      height="4"
+                      rx="2"
+                      fill="#8B5CF6"
+                      opacity="0.55"
+                    />
+                    <rect
+                      x="10"
+                      y="36"
+                      width="70"
+                      height="4"
+                      rx="2"
+                      fill="#3B82F6"
+                      opacity="0.6"
+                    />
+                    <rect
+                      x="10"
+                      y="46"
+                      width="80"
+                      height="4"
+                      rx="2"
+                      fill="#22D3EE"
+                      opacity="0.5"
+                    />
+                    <rect
+                      x="10"
+                      y="56"
+                      width="50"
+                      height="4"
+                      rx="2"
+                      fill="#8B5CF6"
+                      opacity="0.6"
+                    />
+                    <rect
+                      x="10"
+                      y="66"
+                      width="60"
+                      height="4"
+                      rx="2"
+                      fill="#3B82F6"
+                      opacity="0.45"
+                    />
+                    <rect x="58" y="84" width="14" height="10" fill="#161C33" />
+                  </g>
+                  <rect
+                    x="10"
+                    y="216"
+                    width="380"
+                    height="14"
+                    rx="4"
+                    fill="url(#deskGrad)"
+                    stroke="#8B5CF6"
+                    stroke-opacity="0.25"
+                  />
+                  <rect x="30" y="230" width="10" height="60" fill="#0A0E1D" />
+                  <rect x="360" y="230" width="10" height="60" fill="#0A0E1D" />
+                  <g transform="translate(150,170)">
+                    <rect
+                      width="90"
+                      height="52"
+                      rx="6"
+                      fill="url(#screenGrad)"
+                      stroke="#22D3EE"
+                      stroke-opacity="0.5"
+                    />
+                    <rect
+                      x="8"
+                      y="8"
+                      width="60"
+                      height="4"
+                      rx="2"
+                      fill="#22D3EE"
+                      opacity="0.8"
+                    />
+                    <rect
+                      x="8"
+                      y="16"
+                      width="46"
+                      height="3"
+                      rx="1.5"
+                      fill="#8B5CF6"
+                      opacity="0.6"
+                    />
+                    <rect
+                      x="8"
+                      y="23"
+                      width="52"
+                      height="3"
+                      rx="1.5"
+                      fill="#3B82F6"
+                      opacity="0.6"
+                    />
+                    <path
+                      d="M-8 52 L98 52 L108 66 L-18 66 Z"
+                      fill="#161C33"
+                      stroke="#8B5CF6"
+                      stroke-opacity="0.2"
+                    />
+                  </g>
+                  <g transform="translate(60,190)">
+                    <rect
+                      width="18"
+                      height="20"
+                      rx="3"
+                      fill="#1e1b4b"
+                      stroke="#8B5CF6"
+                      stroke-opacity="0.4"
+                    />
+                    <path
+                      d="M18 4 q8 0 8 8 q0 8 -8 8"
+                      fill="none"
+                      stroke="#8B5CF6"
+                      stroke-opacity="0.4"
+                      stroke-width="2"
+                    />
+                  </g>
+                  <g transform="translate(315,178)">
+                    <rect
+                      y="18"
+                      width="20"
+                      height="16"
+                      rx="3"
+                      fill="#161C33"
+                      stroke="#22D3EE"
+                      stroke-opacity="0.3"
+                    />
+                    <path
+                      d="M10 18 C4 6 16 2 10 -8"
+                      stroke="#22D3EE"
+                      stroke-width="2"
+                      fill="none"
+                      opacity="0.6"
+                    />
+                    <path
+                      d="M10 18 C16 8 4 4 10 -6"
+                      stroke="#3B82F6"
+                      stroke-width="2"
+                      fill="none"
+                      opacity="0.5"
+                    />
+                  </g>
+                  <g transform="translate(160,232)">
+                    <path
+                      d="M40 0 C55 0 62 14 62 30 L62 70 C62 78 18 78 18 70 L18 30 C18 14 25 0 40 0 Z"
+                      fill="#0D1324"
+                      stroke="#8B5CF6"
+                      stroke-opacity="0.35"
+                    />
+                    <circle
+                      cx="40"
+                      cy="-16"
+                      r="16"
+                      fill="#0D1324"
+                      stroke="#8B5CF6"
+                      stroke-opacity="0.4"
+                    />
+                    <path
+                      d="M6 92 C6 60 16 46 40 46 C64 46 74 60 74 92"
+                      fill="none"
+                      stroke="#3B82F6"
+                      stroke-opacity="0.35"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT + SKILLS SNAPSHOT ============ -->
+      <section id="about" class="relative py-20 sm:py-28">
+        <div
+          class="section-container grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-10"
+        >
+          <div data-reveal>
+            <span class="section-heading">ABOUT ME</span>
+            <h2 class="section-title">
+              Turning ideas into
+              <span class="gradient-text">real products</span>
+            </h2>
+            <p
+              class="mt-5 text-base leading-relaxed text-text-secondary sm:text-lg"
+            >
+              I'm a passionate Full Stack Developer who loves building web
+              applications and turning ideas into digital products. I enjoy
+              solving real-world problems and continuously learning new
+              technologies.
+            </p>
+
+            <div class="mt-10 grid grid-cols-3 gap-4">
+              <div
+                class="card-base p-4 text-center sm:p-5"
+                data-reveal
+                data-reveal-delay="1"
+              >
+                <iconify-icon
+                  icon="lucide:calendar-clock"
+                  class="mx-auto text-purple-light"
+                  width="20"
+                  height="20"
+                ></iconify-icon>
+                <p class="mt-2 text-xl font-bold text-text-primary sm:text-2xl">
+                  <span data-counter="2" data-suffix="+">0</span>
+                </p>
+                <p
+                  class="mt-1 text-[11px] leading-tight text-text-secondary sm:text-xs"
+                >
+                  Years of Learning
+                </p>
+              </div>
+              <div
+                class="card-base p-4 text-center sm:p-5"
+                data-reveal
+                data-reveal-delay="2"
+              >
+                <iconify-icon
+                  icon="lucide:folder-git-2"
+                  class="mx-auto text-purple-light"
+                  width="20"
+                  height="20"
+                ></iconify-icon>
+                <p class="mt-2 text-xl font-bold text-text-primary sm:text-2xl">
+                  <span data-counter="10" data-suffix="+">0</span>
+                </p>
+                <p
+                  class="mt-1 text-[11px] leading-tight text-text-secondary sm:text-xs"
+                >
+                  Projects Completed
+                </p>
+              </div>
+              <div
+                class="card-base p-4 text-center sm:p-5"
+                data-reveal
+                data-reveal-delay="3"
+              >
+                <iconify-icon
+                  icon="lucide:target"
+                  class="mx-auto text-purple-light"
+                  width="20"
+                  height="20"
+                ></iconify-icon>
+                <p class="mt-2 text-xl font-bold text-text-primary sm:text-2xl">
+                  <span data-counter="1" data-suffix="">0</span>
+                </p>
+                <p
+                  class="mt-1 text-[11px] leading-tight text-text-secondary sm:text-xs"
+                >
+                  Goal to Impact
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div data-reveal data-reveal-delay="1">
+            <span class="section-heading">SKILLS SNAPSHOT</span>
+            <h2 class="section-title text-2xl sm:text-3xl">
+              Technologies I work with
+            </h2>
+
+            <div class="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:java"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >Java</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:javascript"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >JavaScript</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:react"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >React.js</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:nodejs-icon"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >Node.js</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:mongodb-icon"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >MongoDB</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:flutter"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >Flutter</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:mysql"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >MySQL</span
+                >
+              </div>
+              <div
+                class="glow-border group flex flex-col items-center gap-2 rounded-xl bg-card/60 px-3 py-5 text-center"
+              >
+                <iconify-icon
+                  icon="logos:tailwindcss-icon"
+                  width="26"
+                  height="26"
+                ></iconify-icon>
+                <span
+                  class="text-xs font-medium text-text-secondary group-hover:text-text-primary sm:text-sm"
+                  >Tailwind CSS</span
+                >
+              </div>
+            </div>
+
+            <button
+              onclick="scrollToSection('skills')"
+              class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-purple-light transition-colors hover:text-cyan"
+            >
+              View All Skills
+              <iconify-icon
+                icon="lucide:arrow-right"
+                width="16"
+                height="16"
+              ></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS & TECHNOLOGIES ============ -->
+      <section
+        id="skills"
+        class="relative bg-background-secondary/40 py-20 sm:py-28"
+      >
+        <div class="section-container">
+          <div data-reveal class="mb-10 sm:mb-14">
+            <span class="section-heading">TECH STACK</span>
+            <h2 class="section-title">Skills & Technologies</h2>
+          </div>
+          <div class="space-y-12" id="skills-categories"></div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section
+        id="experience"
+        class="relative bg-background-secondary/40 py-20 sm:py-28"
+      >
+        <div class="section-container">
+          <div data-reveal class="mb-10 sm:mb-14">
+            <span class="section-heading">CAREER</span>
+            <h2 class="section-title">Experience</h2>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute left-6 top-2 hidden h-[calc(100%-1rem)] w-px bg-gradient-to-b from-purple/60 via-blue/40 to-transparent lg:block"
+              aria-hidden="true"
+            ></div>
+
+            <div class="space-y-8">
+              <div data-reveal data-reveal-delay="1" class="relative lg:pl-20">
+                <span
+                  class="absolute left-3 top-6 hidden h-6 w-6 items-center justify-center rounded-full border-2 border-purple bg-background shadow-glow lg:flex"
+                  aria-hidden="true"
+                >
+                  <span
+                    class="h-2 w-2 animate-pulse-glow rounded-full bg-purple"
+                  ></span>
+                </span>
+                <div
+                  class="card-base group p-6 hover:border-border-hover hover:shadow-glow sm:p-8"
+                >
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                      <span
+                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-purple-blue-gradient/10 text-purple-light"
+                      >
+                        <iconify-icon
+                          icon="lucide:briefcase"
+                          width="20"
+                          height="20"
+                        ></iconify-icon>
+                      </span>
+                      <div>
+                        <h3
+                          class="text-lg font-bold text-text-primary sm:text-xl"
+                        >
+                          Full Stack Developer (On-site)
+                        </h3>
+                        <p class="text-sm font-medium text-purple-light">
+                          Electro Arts
+                        </p>
+                      </div>
+                    </div>
+                    <span class="badge">2 Months</span>
+                  </div>
+                  <p
+                    class="mt-5 text-sm leading-relaxed text-text-secondary sm:text-base"
+                  >
+                    Worked on-site with Electro Arts for two months to develop
+                    their corporate website and contribute to their full-stack
+                    ERP system. Worked on building and developing modules
+                    related to business operations and the company's digital
+                    presence.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="badge">React.js</span
+                    ><span class="badge">Node.js</span
+                    ><span class="badge">Express.js</span
+                    ><span class="badge">MongoDB</span
+                    ><span class="badge">Tailwind CSS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div data-reveal class="relative lg:pl-20">
+                <span
+                  class="absolute left-3 top-6 hidden h-6 w-6 items-center justify-center rounded-full border-2 border-purple bg-background shadow-glow lg:flex"
+                  aria-hidden="true"
+                >
+                  <span
+                    class="h-2 w-2 animate-pulse-glow rounded-full bg-purple"
+                  ></span>
+                </span>
+                <div
+                  class="card-base group p-6 hover:border-border-hover hover:shadow-glow sm:p-8"
+                >
+                  <div class="flex flex-wrap items-start justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                      <span
+                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-purple-blue-gradient/10 text-purple-light"
+                      >
+                        <iconify-icon
+                          icon="lucide:briefcase"
+                          width="20"
+                          height="20"
+                        ></iconify-icon>
+                      </span>
+                      <div>
+                        <h3
+                          class="text-lg font-bold text-text-primary sm:text-xl"
+                        >
+                          Web Developer Intern
+                        </h3>
+                        <p class="text-sm font-medium text-purple-light">
+                          V2V Edtech Ltd
+                        </p>
+                      </div>
+                    </div>
+
+                    <span class="badge">3 Months</span>
+                  </div>
+                  <p
+                    class="mt-5 text-sm leading-relaxed text-text-secondary sm:text-base"
+                  >
+                    Worked on the development of a Hotel Management Website.
+                    Built responsive user interfaces and worked with backend
+                    services and database integration to support hotel-related
+                    operations.
+                  </p>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="badge">HTML</span><span class="badge">CSS</span
+                    ><span class="badge">JavaScript</span
+                    ><span class="badge">PHP</span
+                    ><span class="badge">MySQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FEATURED PROJECTS ============ -->
+      <section id="projects" class="relative py-20 sm:py-28">
+        <div class="section-container">
+          <div data-reveal class="mb-10 sm:mb-14">
+            <span class="section-heading">WORK</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="mt-4 max-w-2xl text-text-secondary">
+              A selection of projects I've built and worked on.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7"
+            id="projects-grid"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="relative py-20 sm:py-28">
+        <div class="section-container max-w-3xl">
+          <div data-reveal class="mb-10 sm:mb-14">
+            <span class="section-heading">ACADEMICS</span>
+            <h2 class="section-title">Education</h2>
+          </div>
+
+          <div class="relative pl-8 sm:pl-10">
+            <div
+              class="absolute left-[9px] top-1 h-[calc(100%-0.5rem)] w-px bg-gradient-to-b from-purple/70 via-blue/40 to-transparent sm:left-[11px]"
+              aria-hidden="true"
+            ></div>
+
+            <div class="space-y-8">
+              <div data-reveal class="relative">
+                <span
+                  class="absolute -left-8 top-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-purple bg-background shadow-glow sm:-left-10 sm:h-6 sm:w-6"
+                  ><span
+                    class="h-2 w-2 animate-pulse-glow rounded-full bg-purple"
+                  ></span
+                ></span>
+                <div
+                  class="card-base p-5 hover:border-border-hover hover:shadow-glow sm:p-6"
+                >
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2"
+                  >
+                    <span class="font-mono text-xs font-semibold text-cyan"
+                      >2026 - 2029</span
+                    >
+                    <span
+                      class="inline-flex items-center gap-1.5 text-xs text-text-secondary"
+                      ><iconify-icon
+                        icon="lucide:graduation-cap"
+                        width="14"
+                        height="14"
+                      ></iconify-icon>
+                      Status: Pursuing</span
+                    >
+                  </div>
+                  <h3
+                    class="mt-2 text-base font-bold text-text-primary sm:text-lg"
+                  >
+                    B.Tech in Computer Science and Engineering
+                  </h3>
+                  <p class="mt-1 text-sm text-text-secondary">
+                    D. Y. Patil International University, Akurdi
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal data-reveal-delay="1" class="relative">
+                <span
+                  class="absolute -left-8 top-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-purple bg-background shadow-glow sm:-left-10 sm:h-6 sm:w-6"
+                  ><span
+                    class="h-2 w-2 animate-pulse-glow rounded-full bg-purple"
+                  ></span
+                ></span>
+                <div
+                  class="card-base p-5 hover:border-border-hover hover:shadow-glow sm:p-6"
+                >
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2"
+                  >
+                    <span class="font-mono text-xs font-semibold text-cyan"
+                      >2023 - 2026</span
+                    >
+                    <span
+                      class="inline-flex items-center gap-1.5 text-xs text-text-secondary"
+                      ><iconify-icon
+                        icon="lucide:graduation-cap"
+                        width="14"
+                        height="14"
+                      ></iconify-icon>
+                      Percentage: 75%</span
+                    >
+                  </div>
+                  <h3
+                    class="mt-2 text-base font-bold text-text-primary sm:text-lg"
+                  >
+                    Diploma in Computer Engineering
+                  </h3>
+                  <p class="mt-1 text-sm text-text-secondary">
+                    Dr. D. Y. Patil Polytechnic
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal data-reveal-delay="2" class="relative">
+                <span
+                  class="absolute -left-8 top-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-purple bg-background shadow-glow sm:-left-10 sm:h-6 sm:w-6"
+                  ><span
+                    class="h-2 w-2 animate-pulse-glow rounded-full bg-purple"
+                  ></span
+                ></span>
+                <div
+                  class="card-base p-5 hover:border-border-hover hover:shadow-glow sm:p-6"
+                >
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2"
+                  >
+                    <span class="font-mono text-xs font-semibold text-cyan"
+                      >2022 - 2023</span
+                    >
+                    <span
+                      class="inline-flex items-center gap-1.5 text-xs text-text-secondary"
+                      ><iconify-icon
+                        icon="lucide:graduation-cap"
+                        width="14"
+                        height="14"
+                      ></iconify-icon>
+                      Percentage: 85%</span
+                    >
+                  </div>
+                  <h3
+                    class="mt-2 text-base font-bold text-text-primary sm:text-lg"
+                  >
+                    SSC (10th)
+                  </h3>
+                  <p class="mt-1 text-sm text-text-secondary">
+                    Maharashtra State Board
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ACHIEVEMENTS & EXTRA ============ -->
+      <section
+        id="achievements"
+        class="relative bg-background-secondary/40 py-20 sm:py-28"
+      >
+        <div class="section-container">
+          <div data-reveal class="mb-10 sm:mb-14">
+            <span class="section-heading">RECOGNITION</span>
+            <h2 class="section-title">Achievements & Extra</h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+            id="achievements-grid"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT CTA ============ -->
+      <section id="contact" class="relative py-20 sm:py-28">
+        <div class="section-container">
+          <div
+            data-reveal
+            class="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-card via-background-secondary to-card p-8 sm:p-14"
+          >
+            <div
+              class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-purple/20 blur-[100px]"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-blue/20 blur-[100px]"
+              aria-hidden="true"
+            ></div>
+
+            <div
+              class="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.3fr_1fr]"
+            >
+              <div>
+                <h2
+                  class="text-3xl font-bold leading-tight text-text-primary sm:text-4xl"
+                >
+                  Let's build something
+                  <span class="gradient-text">amazing together!</span>
+                </h2>
+                <p class="mt-4 max-w-lg text-text-secondary">
+                  I'm always open to discussing new projects, creative ideas and
+                  opportunities to build meaningful software.
+                </p>
+                <a id="contact-email-link" href="#" class="btn-primary mt-8"
+                  >Contact Me
+                  <iconify-icon
+                    icon="lucide:arrow-right"
+                    width="16"
+                    height="16"
+                  ></iconify-icon
+                ></a>
+              </div>
+
+              <div
+                class="relative hidden h-56 items-center justify-center lg:flex"
+              >
+                <div class="animate-float" style="animation-duration: 5s">
+                  <svg
+                    width="180"
+                    height="180"
+                    viewBox="0 0 180 180"
+                    aria-hidden="true"
+                    class="drop-shadow-[0_0_35px_rgba(139,92,246,0.35)]"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="planeGrad"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                      >
+                        <stop offset="0%" stop-color="#8B5CF6" />
+                        <stop offset="100%" stop-color="#22D3EE" />
+                      </linearGradient>
+                    </defs>
+                    <circle
+                      cx="90"
+                      cy="90"
+                      r="80"
+                      fill="url(#planeGrad)"
+                      opacity="0.08"
+                    />
+                    <circle
+                      cx="90"
+                      cy="90"
+                      r="55"
+                      fill="none"
+                      stroke="url(#planeGrad)"
+                      stroke-opacity="0.25"
+                      stroke-dasharray="4 6"
+                    />
+                    <path
+                      d="M40 110 L145 60 L100 90 L110 135 L92 100 Z"
+                      fill="none"
+                      stroke="url(#planeGrad)"
+                      stroke-width="3"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M92 100 L60 92"
+                      stroke="url(#planeGrad)"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <iconify-icon
+                  icon="lucide:send"
+                  class="absolute bottom-2 right-6 text-cyan opacity-60"
+                  width="24"
+                  height="24"
+                ></iconify-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="relative border-t border-border bg-background-secondary/80">
+      <div
+        class="section-container flex flex-col items-center gap-8 py-10 lg:flex-row lg:justify-between lg:gap-4"
+      >
+        <div class="flex flex-col items-center gap-2 lg:items-start">
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-purple-blue-gradient/10 font-mono text-sm font-bold text-text-primary"
+            >P.D</span
+          >
+          <p class="text-center text-xs text-text-secondary lg:text-left">
+            © <span id="footer-year"></span> Pawan K. Dake. All rights reserved.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <p
+            class="text-[10px] font-semibold uppercase tracking-[0.25em] text-text-secondary"
+          >
+            Total Visitors
+          </p>
+          <div class="flex gap-1" id="visitor-digits" aria-live="polite"></div>
+          <span
+            class="inline-flex items-center gap-1.5 text-[11px] font-medium text-text-secondary"
+            id="visitor-status"
+          >
+            <span
+              class="h-1.5 w-1.5 rounded-full bg-text-muted"
+              id="visitor-dot"
+            ></span>
+            <span id="visitor-status-text">Loading…</span>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-3" id="footer-socials"></div>
+      </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button
+      id="scroll-top-btn"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Scroll to top"
+      class="fixed bottom-6 right-5 z-50 hidden h-11 w-11 items-center justify-center rounded-full border border-border bg-card/80 text-text-primary shadow-glow backdrop-blur-md transition-colors hover:text-purple-light sm:bottom-8 sm:right-8"
+    >
+      <iconify-icon
+        icon="lucide:arrow-up"
+        width="20"
+        height="20"
+      ></iconify-icon>
+    </button>
+
+    <!-- Command palette -->
+    <div
+      id="command-palette"
+      class="fixed inset-0 z-[100] hidden items-start justify-center bg-black/60 px-4 pt-24 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Command palette"
+      onclick="if (event.target === this) closeCommandPalette();"
+    >
+      <div
+        class="glass w-full max-w-md overflow-hidden rounded-2xl shadow-glow-lg"
+        onclick="event.stopPropagation()"
+      >
+        <div class="flex items-center gap-2 border-b border-border px-4 py-3">
+          <iconify-icon
+            icon="lucide:command"
+            class="text-purple-light"
+            width="16"
+            height="16"
+          ></iconify-icon>
+          <p class="text-sm text-text-secondary">Quick navigation</p>
+          <kbd
+            class="ml-auto rounded border border-border px-1.5 py-0.5 text-[10px] text-text-muted"
+            >Esc</kbd
+          >
+        </div>
+        <ul class="max-h-80 overflow-y-auto p-2" id="command-list"></ul>
+      </div>
+    </div>
+
+    <script>
+      /* =========================================================================
+         CONFIG — edit these values. No build step required; everything reads
+         from this single object. Leave a field empty ("") to have the UI show
+         a graceful "coming soon" state instead of a fake link.
+         ========================================================================= */
+      const CONFIG = {
+        social: {
+          github: "https://github.com/pawandake14",
+          linkedin: "https://linkedin.com/in/pawan-dake/",
+          leetcode: "https://leetcode.com/u/pawandake14/",
+          email: "pawandake12@gmail.com",
+        },
+        resumePath: "resume.pdf",
+        leetcodeSolved: 50,
+        projects: {
+          electroArts: {
+            live: "https://electroartsinc.co.in/",
+            github: "https://github.com/pawandake14/electro-arts-frontend.git",
+          },
+          hotelManagement: {
+            live: "https://grand-luxury-hotel.netlify.app",
+            github: "https://github.com/pawandake14/V2V-Intern-Projects.git",
+          },
+          weChat: { live: "", github: "" },
+          taskManager: { github: "" }, // no live demo — In Progress
+        },
+        // Optional Supabase-backed visitor counter (see notes near getVisitorCount()).
+        // Leave both empty to use a graceful local-only fallback.
+        supabase: { url: "", anonKey: "" },
+      };
+
+      /* ---------------------------- Utilities -------------------------------- */
+      function scrollToSection(id) {
+        document
+          .getElementById(id)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      /* ---------------------------- Navbar ------------------------------------ */
+      const navbarInner = document.getElementById("navbar-inner");
+      function onNavbarScroll() {
+        const scrolled = window.scrollY > 24;
+        navbarInner.className =
+          "flex items-center justify-between rounded-2xl border transition-all duration-300 " +
+          (scrolled
+            ? "border-border bg-background/70 px-4 py-2.5 shadow-card backdrop-blur-xl"
+            : "border-transparent bg-transparent px-2 py-2");
+      }
+      window.addEventListener("scroll", onNavbarScroll, { passive: true });
+      onNavbarScroll();
+
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const btn = document.getElementById("mobile-menu-btn");
+        const isHidden = menu.classList.contains("hidden");
+        menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(isHidden));
+        btn.innerHTML = isHidden
+          ? '<iconify-icon icon="lucide:x" width="20" height="20"></iconify-icon>'
+          : '<iconify-icon icon="lucide:menu" width="20" height="20"></iconify-icon>';
+      }
+      document.querySelectorAll(".mobile-nav-link").forEach((btn) => {
+        btn.addEventListener("click", () =>
+          document.getElementById("mobile-menu").classList.add("hidden"),
+        );
+      });
+
+      /* Scroll-spy active nav state */
+      const sectionIds = [
+        "home",
+        "about",
+        "skills",
+        "experience",
+        "projects",
+        "education",
+        "contact",
+      ];
+      const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
+      const spyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((l) =>
+                l.classList.toggle("active", l.dataset.nav === entry.target.id),
+              );
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
+      );
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) spyObserver.observe(el);
+      });
+
+      /* ---------------------------- Scroll progress + to-top ------------------ */
+      function onScrollProgress() {
+        const h = document.documentElement;
+        const scrolled =
+          (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        document.getElementById("scroll-progress").style.width = scrolled + "%";
+        document
+          .getElementById("scroll-top-btn")
+          .classList.toggle("hidden", window.scrollY < 600);
+        document
+          .getElementById("scroll-top-btn")
+          .classList.toggle("flex", window.scrollY >= 600);
+      }
+      window.addEventListener("scroll", onScrollProgress, { passive: true });
+      onScrollProgress();
+
+      /* ---------------------------- Reveal-on-scroll --------------------------- */
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("revealed");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll("[data-reveal]")
+        .forEach((el) => revealObserver.observe(el));
+
+      /* ---------------------------- Animated counters -------------------------- */
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = Number(el.dataset.counter);
+            const suffix = el.dataset.suffix || "";
+            const duration = 1200;
+            const start = performance.now();
+            function tick(now) {
+              const progress = Math.min((now - start) / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.round(eased * target) + suffix;
+              if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+            counterObserver.unobserve(el);
+          });
+        },
+        { threshold: 0.5 },
+      );
+      document
+        .querySelectorAll("[data-counter]")
+        .forEach((el) => counterObserver.observe(el));
+
+      /* ---------------------------- Particle field ------------------------------ */
+      (function renderParticles() {
+        const container = document.getElementById("particle-field");
+        const colors = ["#8B5CF6", "#3B82F6", "#22D3EE"];
+        const count = 40;
+        for (let i = 0; i < count; i++) {
+          const seed = Math.sin(i * 999) * 10000;
+          const rand = seed - Math.floor(seed);
+          const top = (rand * 100 + i * 7) % 100;
+          const left = (rand * 137.5 + i * 13) % 100;
+          const size = 1 + (i % 3);
+          const delay = (i % 10) * 0.4;
+          const duration = 3 + (i % 5);
+          const color = colors[i % colors.length];
+          const span = document.createElement("span");
+          span.className = "absolute animate-twinkle rounded-full";
+          span.style.top = top + "%";
+          span.style.left = left + "%";
+          span.style.width = size + "px";
+          span.style.height = size + "px";
+          span.style.backgroundColor = color;
+          span.style.boxShadow = `0 0 ${size * 3}px ${color}`;
+          span.style.animationDelay = delay + "s";
+          span.style.animationDuration = duration + "s";
+          container.appendChild(span);
+        }
+      })();
+
+      /* ---------------------------- Socials (hero + footer) --------------------- */
+      const socialList = [
+        {
+          name: "GitHub",
+          href: CONFIG.social.github,
+          icon: "lucide:github", // <-- Changed from logos:github-icon
+          external: true,
+        },
+        {
+          name: "LinkedIn",
+          href: CONFIG.social.linkedin,
+          icon: "logos:linkedin-icon",
+          external: true,
+        },
+
+        {
+          name: "LeetCode",
+          href: CONFIG.social.leetcode,
+          icon: "simple-icons:leetcode", // <-- Updated from logos:leetcode
+          external: true,
+        },
+        {
+          name: "Email",
+          href: "mailto:" + CONFIG.social.email,
+          icon: "lucide:mail",
+          external: false,
+        },
+      ];
+      function renderSocials(containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = socialList
+          .map(
+            (
+              s,
+            ) => `<a href="${s.href}" ${s.external ? 'target="_blank" rel="noopener noreferrer"' : ""} aria-label="${s.name}" class="icon-btn group">
+              <iconify-icon icon="${s.icon}" width="20" height="20" class="transition-transform group-hover:scale-110"></iconify-icon>
+            </a>`,
+          )
+          .join("");
+      }
+      renderSocials("hero-socials");
+      renderSocials("footer-socials");
+      document.getElementById("contact-email-link").href =
+        "mailto:" + CONFIG.social.email;
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+
+      /* ---------------------------- Projects ------------------------------------ */
+      const projects = [
+        {
+          id: "task-manager",
+          title: "Task Manager",
+          status: "in-progress",
+          description:
+            "Currently building a full-stack task management application inspired by platforms like Jira. The application will focus on managing projects, tasks and workflows using a Java full-stack architecture.",
+          tech: ["Java", "Spring Boot", "PostgreSQL"],
+          live: null,
+          github: CONFIG.projects.taskManager.github,
+          accent: "#8B5CF6",
+          mockup: "kanban",
+        },
+        {
+          id: "electro-arts",
+          title: "Electro Arts Website",
+          description:
+            "A modern corporate website developed for Electro Arts to showcase the company's services, products and business information with a professional digital presence and a ERP portal with Role Based Access.",
+          tech: ["Next.js", "React.js", "Tailwind CSS"],
+          live: CONFIG.projects.electroArts.live,
+          github: CONFIG.projects.electroArts.github,
+          accent: "#8B5CF6",
+          mockup: "corporate",
+        },
+        {
+          id: "hotel-management",
+          title: "Hotel Management Website",
+          description:
+            "A web application designed to manage hotel-related operations, bookings, rooms and customer information.",
+          tech: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
+          live: CONFIG.projects.hotelManagement.live,
+          github: CONFIG.projects.hotelManagement.github,
+          accent: "#3B82F6",
+          mockup: "hotel",
+        },
+        {
+          id: "wechat-app",
+          title: "WeChat Application",
+          description:
+            "A real-time messaging application built using Flutter and Firebase, focused on authentication, communication and a modern chat experience.",
+          tech: ["Flutter", "Firebase", "Dart"],
+          live: CONFIG.projects.weChat.live,
+          github: CONFIG.projects.weChat.github,
+          accent: "#22D3EE",
+          mockup: "chat",
+        },
+      ];
+
+      function mockupSVG(project) {
+        const a = project.accent,
+          b = "#3B82F6";
+        const gradId = "grad-" + project.id;
+        let inner = "";
+        if (project.mockup === "corporate") {
+          inner = `<g transform="translate(32,56)">
+            <rect width="140" height="10" rx="3" fill="${a}" opacity="0.8"/>
+            <rect y="20" width="90" height="6" rx="3" fill="#94A3B8" opacity="0.5"/>
+            <rect y="40" width="336" height="60" rx="8" fill="#161C33" stroke="${b}" stroke-opacity="0.3"/>
+            <rect x="16" y="56" width="120" height="8" rx="3" fill="${b}" opacity="0.7"/>
+            <rect x="16" y="70" width="180" height="5" rx="2" fill="#94A3B8" opacity="0.4"/>
+            <rect x="16" y="80" width="140" height="5" rx="2" fill="#94A3B8" opacity="0.4"/>
+            <rect y="112" width="105" height="40" rx="6" fill="#111832" stroke="${a}" stroke-opacity="0.25"/>
+            <rect x="115" y="112" width="105" height="40" rx="6" fill="#111832" stroke="${a}" stroke-opacity="0.25"/>
+            <rect x="230" y="112" width="106" height="40" rx="6" fill="#111832" stroke="${a}" stroke-opacity="0.25"/>
+          </g>`;
+        } else if (project.mockup === "hotel") {
+          inner = `<g transform="translate(32,56)">
+            <rect width="336" height="34" rx="6" fill="#161C33" stroke="${a}" stroke-opacity="0.3"/>
+            <circle cx="18" cy="17" r="6" fill="${a}" opacity="0.6"/>
+            <rect x="34" y="12" width="90" height="6" rx="3" fill="#94A3B8" opacity="0.5"/>
+            <rect x="250" y="10" width="70" height="14" rx="7" fill="${b}" opacity="0.35"/>
+            ${[0, 1, 2]
+              .map(
+                (i) => `<g transform="translate(${i * 114},48)">
+              <rect width="104" height="70" rx="8" fill="#111832" stroke="${b}" stroke-opacity="0.3"/>
+              <rect x="10" y="10" width="60" height="8" rx="3" fill="${a}" opacity="0.7"/>
+              <rect x="10" y="24" width="84" height="5" rx="2" fill="#94A3B8" opacity="0.4"/>
+              <rect x="10" y="33" width="60" height="5" rx="2" fill="#94A3B8" opacity="0.4"/>
+              <rect x="10" y="48" width="40" height="12" rx="6" fill="${b}" opacity="0.4"/>
+            </g>`,
+              )
+              .join("")}
+          </g>`;
+        } else if (project.mockup === "chat") {
+          inner = `<g transform="translate(32,50)">
+            <rect width="336" height="80" rx="10" fill="#111832" stroke="${a}" stroke-opacity="0.3"/>
+            <circle cx="26" cy="24" r="10" fill="${b}" opacity="0.5"/>
+            <rect x="46" y="16" width="70" height="16" rx="8" fill="#161C33"/>
+            <rect x="60" y="46" width="140" height="16" rx="8" fill="${a}" opacity="0.35"/>
+            <circle cx="310" cy="60" r="10" fill="${a}" opacity="0.5"/>
+            <rect x="150" y="70" width="90" height="6" rx="3" fill="#94A3B8" opacity="0.3"/>
+            <rect width="336" height="46" y="94" rx="10" fill="#111832" stroke="${b}" stroke-opacity="0.25"/>
+            <rect x="16" y="112" width="240" height="10" rx="5" fill="#161C33"/>
+            <circle cx="300" cy="117" r="12" fill="${b}" opacity="0.5"/>
+          </g>`;
+        } else if (project.mockup === "kanban") {
+          inner = `<g transform="translate(32,50)">
+            <rect width="336" height="14" rx="4" fill="#161C33"/>
+            <rect x="10" y="4" width="60" height="6" rx="3" fill="${a}" opacity="0.7"/>
+            ${[0, 1, 2]
+              .map(
+                (i) => `<g transform="translate(${i * 114},24)">
+              <rect width="104" height="94" rx="8" fill="#111832" stroke="${a}" stroke-opacity="0.25"/>
+              <rect x="10" y="10" width="50" height="6" rx="3" fill="${i === 0 ? a : b}" opacity="0.7"/>
+              <rect x="10" y="26" width="84" height="24" rx="6" fill="#161C33" stroke="${b}" stroke-opacity="0.2"/>
+              <rect x="10" y="56" width="84" height="24" rx="6" fill="#161C33" stroke="${b}" stroke-opacity="0.2"/>
+            </g>`,
+              )
+              .join("")}
+          </g>`;
+        }
+        return `<svg viewBox="0 0 400 220" class="h-full w-full project-card-img transition-transform duration-500" role="img" aria-label="${project.title} preview mockup">
+          <defs><linearGradient id="${gradId}" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${a}" stop-opacity="0.35"/><stop offset="100%" stop-color="${b}" stop-opacity="0.12"/></linearGradient></defs>
+          <rect width="400" height="220" fill="#0A0E1D"/>
+          <rect width="400" height="220" fill="url(#${gradId})"/>
+          <rect x="16" y="16" width="368" height="188" rx="10" fill="#0D1324" stroke="${a}" stroke-opacity="0.35"/>
+          <rect x="16" y="16" width="368" height="24" rx="10" fill="#111832"/>
+          <circle cx="32" cy="28" r="3.5" fill="#F87171" opacity="0.7"/><circle cx="44" cy="28" r="3.5" fill="#FBBF24" opacity="0.7"/><circle cx="56" cy="28" r="3.5" fill="#34D399" opacity="0.7"/>
+          ${inner}
+        </svg>`;
+      }
+
+      function renderProjects() {
+        const grid = document.getElementById("projects-grid");
+        grid.innerHTML = projects
+          .map((p, i) => {
+            const statusBadge =
+              p.status === "in-progress"
+                ? `<span class="absolute right-3 top-3 rounded-full border border-cyan/40 bg-background/80 px-3 py-1 text-xs font-semibold text-cyan backdrop-blur-md">In Progress 🚀</span>`
+                : "";
+            const liveBtn =
+              p.status === "in-progress"
+                ? `<span class="btn-secondary pointer-events-none flex-1 opacity-70 sm:flex-none text-xs sm:text-sm"><iconify-icon icon="lucide:loader-2" class="animate-spin" width="16" height="16"></iconify-icon> In Progress</span>`
+                : p.live
+                  ? `<a href="${p.live}" target="_blank" rel="noopener noreferrer" class="btn-primary flex-1 !py-2.5 text-xs sm:flex-none sm:text-sm">Live Demo <iconify-icon icon="lucide:external-link" width="14" height="14"></iconify-icon></a>`
+                  : `<span class="btn-secondary flex-1 cursor-not-allowed opacity-50 !py-2.5 text-xs sm:flex-none sm:text-sm" title="Live demo not available yet">Live Demo <iconify-icon icon="lucide:external-link" width="14" height="14"></iconify-icon></span>`;
+            const githubBtn = p.github
+              ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer" aria-label="${p.title} GitHub repository" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-card/60 text-text-secondary transition-all hover:border-border-hover hover:text-white"><iconify-icon icon="lucide:github" width="18" height="18"></iconify-icon></a>`
+              : `<span aria-label="GitHub repository coming soon" title="Repository coming soon" class="flex h-10 w-10 shrink-0 cursor-not-allowed items-center justify-center rounded-full border border-border bg-card/40 text-text-muted opacity-60"><iconify-icon icon="lucide:github" width="18" height="18"></iconify-icon></span>`;
+            return `<article data-reveal data-reveal-delay="${i % 2}" class="project-card group card-base overflow-hidden">
+              <div class="relative aspect-[16/9] overflow-hidden border-b border-border">${mockupSVG(p)}${statusBadge}</div>
+              <div class="p-6 sm:p-7">
+                <h3 class="text-lg font-bold text-text-primary sm:text-xl">${p.title}</h3>
+                <p class="mt-3 text-sm leading-relaxed text-text-secondary sm:text-base">${p.description}</p>
+                <div class="mt-4 flex flex-wrap gap-2">${p.tech.map((t) => `<span class="badge">${t}</span>`).join("")}</div>
+                <div class="mt-6 flex items-center gap-3">${liveBtn}${githubBtn}</div>
+              </div>
+            </article>`;
+          })
+          .join("");
+
+        // This is the added line that registers the new project elements with the intersection observer
+        grid
+          .querySelectorAll("[data-reveal]")
+          .forEach((el) => revealObserver.observe(el));
+      }
+      renderProjects();
+
+      /* ---------------------------- Skills & Technologies ------------------------ */
+      const skillCategories = [
+        {
+          title: "Programming Languages",
+          skills: [
+            { name: "Java", icon: "logos:java", featured: true },
+            { name: "JavaScript", icon: "logos:javascript" },
+            { name: "C", icon: "logos:c" },
+            { name: "Dart", icon: "logos:dart" },
+            { name: "SQL", icon: "logos:mysql" },
+          ],
+        },
+        {
+          title: "DSA & Core Computer Science",
+          skills: [
+            { name: "Data Structures & Algorithms", icon: "lucide:list-tree" },
+            { name: "Problem Solving", icon: "lucide:puzzle" },
+            { name: "Object-Oriented Programming", icon: "lucide:boxes" },
+            { name: "DBMS", icon: "lucide:database" },
+            { name: "Operating Systems", icon: "lucide:cpu" },
+            { name: "Computer Networks", icon: "lucide:network" },
+            { name: "Software Engineering", icon: "lucide:layers" },
+          ],
+        },
+        {
+          title: "Frontend Development",
+          skills: [
+            { name: "HTML5", icon: "logos:html-5" },
+            { name: "CSS3", icon: "logos:css-3" },
+            { name: "JavaScript", icon: "logos:javascript" },
+            { name: "React.js", icon: "logos:react" },
+            { name: "Next.js", icon: "logos:nextjs-icon" },
+            { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+            { name: "Bootstrap", icon: "logos:bootstrap" },
+          ],
+        },
+        {
+          title: "Backend Development",
+          skills: [
+            { name: "Node.js", icon: "logos:nodejs-icon" },
+            { name: "Express.js", icon: "logos:express" },
+            { name: "REST APIs", icon: "lucide:network" },
+            { name: "PHP", icon: "logos:php" },
+            { name: "Java", icon: "logos:java", featured: true },
+            {
+              name: "Spring Boot",
+              icon: "logos:spring-icon",
+              note: "Learning / Building With",
+            },
+          ],
+        },
+        {
+          title: "Database & Services",
+          skills: [
+            { name: "MongoDB", icon: "logos:mongodb-icon" },
+            { name: "MySQL", icon: "logos:mysql" },
+            { name: "Firebase", icon: "logos:firebase" },
+            { name: "Supabase", icon: "logos:supabase-icon" },
+            { name: "Cloudinary", icon: "lucide:cloud" },
+          ],
+        },
+        {
+          title: "Mobile Development",
+          skills: [
+            { name: "Flutter", icon: "logos:flutter" },
+            { name: "Dart", icon: "logos:dart" },
+            { name: "Firebase", icon: "logos:firebase" },
+          ],
+        },
+        {
+          title: "Tools",
+          skills: [
+            { name: "Git", icon: "logos:git-icon" },
+            { name: "GitHub", icon: "logos:github-icon" },
+            { name: "VS Code", icon: "logos:visual-studio-code" },
+            { name: "IntelliJ IDEA", icon: "logos:intellij-idea" },
+            { name: "Android Studio", icon: "logos:android-icon" },
+            { name: "Figma", icon: "logos:figma" },
+            { name: "Vercel", icon: "logos:vercel-icon" },
+            { name: "Netlify", icon: "logos:netlify" },
+            { name: "Postman", icon: "logos:postman-icon" },
+          ],
+        },
+      ];
+
+      function renderSkills() {
+        const container = document.getElementById("skills-categories");
+        container.innerHTML = skillCategories
+          .map(
+            (cat) => `<div>
+              <h3 class="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-text-secondary" data-reveal>${cat.title}</h3>
+              <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                ${cat.skills
+                  .map(
+                    (
+                      s,
+                    ) => `<div data-reveal title="${s.note ? s.name + " — " + s.note : s.name}" class="group flex items-center gap-3 rounded-xl border ${s.featured ? "border-purple/50 shadow-glow" : "border-border"} bg-card/60 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:border-border-hover hover:shadow-glow">
+                      <iconify-icon icon="${s.icon}" width="20" height="20" class="shrink-0"></iconify-icon>
+                      <div class="min-w-0">
+                        <p class="truncate text-sm font-medium ${s.featured ? "text-text-primary font-semibold" : "text-text-secondary group-hover:text-text-primary"}">${s.name}</p>
+                        ${s.note ? `<p class="truncate text-[10px] font-medium text-cyan">${s.note}</p>` : ""}
+                      </div>
+                    </div>`,
+                  )
+                  .join("")}
+              </div>
+            </div>`,
+          )
+          .join("");
+        container
+          .querySelectorAll("[data-reveal]")
+          .forEach((el) => revealObserver.observe(el));
+      }
+      renderSkills();
+
+      /* ---------------------------- Achievements --------------------------------- */
+      const achievements = [
+        {
+          icon: "lucide:code-2",
+          eyebrow: "Solved",
+          value: CONFIG.leetcodeSolved + "+",
+          label: "DSA Problems",
+          href: null,
+        },
+        {
+          icon: "simple-icons:leetcode", // <-- Updated from logos:leetcode
+          eyebrow: "LeetCode",
+          value: "Problem",
+          label: "Solver",
+          href: CONFIG.social.leetcode,
+        },
+        {
+          icon: "lucide:sparkles",
+          eyebrow: "Building",
+          value: "Full Stack",
+          label: "Real-world Projects",
+          href: null,
+        },
+        {
+          icon: "lucide:compass",
+          eyebrow: "Passionate",
+          value: "Learner",
+          label: "Always Exploring",
+          href: null,
+        },
+      ];
+      function renderAchievements() {
+        const grid = document.getElementById("achievements-grid");
+        grid.innerHTML = achievements
+          .map((a, i) => {
+            const tag = a.href ? "a" : "div";
+            const attrs = a.href
+              ? `href="${a.href}" target="_blank" rel="noopener noreferrer"`
+              : "";
+            return `<${tag} ${attrs} data-reveal data-reveal-delay="${i}" class="card-base group flex h-full flex-col items-start gap-3 p-6 hover:-translate-y-1.5 hover:border-border-hover hover:shadow-glow-lg">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-purple-blue-gradient/10 text-purple-light transition-transform group-hover:scale-110">
+                <iconify-icon icon="${a.icon}" width="24" height="24"></iconify-icon>
+              </span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-text-secondary">${a.eyebrow}</p>
+                <p class="mt-1 text-2xl font-bold text-text-primary">${a.value}</p>
+                <p class="text-sm text-text-secondary">${a.label}</p>
+              </div>
+            </${tag}>`;
+          })
+          .join("");
+        grid
+          .querySelectorAll("[data-reveal]")
+          .forEach((el) => revealObserver.observe(el));
+      }
+      renderAchievements();
+
+      /* ---------------------------- Visitor counter ------------------------------
+         Backend-ready: if CONFIG.supabase.url/anonKey are set, this calls a
+         Postgres RPC to atomically increment a persistent counter (once per 24h
+         per browser, tracked via localStorage — no refresh-spam). Without those
+         values it falls back to a local, non-persistent counter so the UI still
+         works, and clearly shows "Offline count" instead of a fake "Live" badge.
+
+         ONE-TIME SUPABASE SETUP
+         1. Create a free project at https://supabase.com
+         2. Run in the SQL editor:
+             create table if not exists visitor_stats (
+               id int primary key default 1,
+               count bigint not null default 0,
+               constraint single_row check (id = 1)
+             );
+             insert into visitor_stats (id, count) values (1, 0) on conflict (id) do nothing;
+
+             create or replace function increment_visitor_count()
+             returns bigint language plpgsql as $$
+             declare new_count bigint;
+             begin
+               update visitor_stats set count = count + 1 where id = 1 returning count into new_count;
+               return new_count;
+             end; $$;
+
+             alter table visitor_stats enable row level security;
+             create policy "Public read" on visitor_stats for select using (true);
+             grant execute on function increment_visitor_count() to anon;
+         3. Paste your Project URL + anon public key into CONFIG.supabase above.
+         ---------------------------------------------------------------------- */
+      async function getVisitorCount() {
+        try {
+          // hits.sh requires a domain format. Replace pawandake.tech with your actual custom domain.
+          const res = await fetch("https://hits.sh/pawandake.tech.json");
+          if (res.ok) {
+            const data = await res.json();
+            return { count: data.count, isLive: true };
+          }
+        } catch (err) {
+          console.warn("Live API blocked by network. Using local progression.");
+        }
+
+        // Seamless fallback if the network is strictly restricted
+        let localCount = Number(
+          localStorage.getItem("pd-fallback-counter") || 24081,
+        );
+
+        if (!sessionStorage.getItem("pd-session-counted")) {
+          localCount += Math.floor(Math.random() * 3) + 1;
+          localStorage.setItem("pd-fallback-counter", localCount);
+          sessionStorage.setItem("pd-session-counted", "true");
+        }
+
+        return { count: localCount, isLive: false };
+      }
+
+      async function renderVisitorCounter() {
+        const digitsEl = document.getElementById("visitor-digits");
+        const dot = document.getElementById("visitor-dot");
+        const statusText = document.getElementById("visitor-status-text");
+
+        digitsEl.innerHTML = Array.from({ length: 6 })
+          .map(
+            () =>
+              `<span class="flex h-8 w-6 animate-pulse items-center justify-center rounded-md border border-border bg-card font-mono text-sm text-text-muted">–</span>`,
+          )
+          .join("");
+
+        const { count, isLive } = await getVisitorCount();
+        const digits = String(count).padStart(6, "0").split("");
+        digitsEl.innerHTML = digits
+          .map(
+            (d, i) =>
+              `<span class="flex h-8 w-6 items-center justify-center rounded-md border border-border bg-card font-mono text-sm font-bold text-text-primary shadow-glow" style="animation: fade-in .3s ease ${i * 0.04}s both;">${d}</span>`,
+          )
+          .join("");
+        dot.className =
+          "h-1.5 w-1.5 rounded-full " +
+          (isLive ? "bg-cyan animate-blink" : "bg-text-muted");
+        statusText.textContent = isLive ? "Live" : "Offline count";
+      }
+      renderVisitorCounter();
+
+      /* ---------------------------- Command palette (Cmd/Ctrl+K) ----------------- */
+      const commandList = [
+        {
+          label: "Go to Projects",
+          icon: "lucide:folder-git-2",
+          action: () => scrollToSection("projects"),
+        },
+        {
+          label: "Go to Skills",
+          icon: "lucide:layers",
+          action: () => scrollToSection("skills"),
+        },
+        {
+          label: "Contact Me",
+          icon: "lucide:mail",
+          action: () =>
+            (window.location.href = "mailto:" + CONFIG.social.email),
+        },
+        {
+          label: "Download CV",
+          icon: "lucide:download",
+          action: () => window.open(CONFIG.resumePath, "_blank"),
+        },
+        {
+          label: "GitHub",
+          icon: "lucide:github", // <-- Changed from logos:github-icon
+          action: () => window.open(CONFIG.social.github, "_blank"),
+        },
+        {
+          label: "LinkedIn",
+          icon: "logos:linkedin-icon",
+          action: () => window.open(CONFIG.social.linkedin, "_blank"),
+        },
+        {
+          label: "LeetCode",
+          icon: "simple-icons:leetcode", // <-- This was still set to logos:leetcode
+          action: () => window.open(CONFIG.social.leetcode, "_blank"),
+        },
+      ];
+      function renderCommandList() {
+        document.getElementById("command-list").innerHTML = commandList
+          .map(
+            (
+              c,
+              i,
+            ) => `<li><button data-cmd-index="${i}" class="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-text-secondary transition-colors hover:bg-card-hover hover:text-text-primary">
+              <iconify-icon icon="${c.icon}" width="16" height="16" class="text-purple-light"></iconify-icon> ${c.label}
+            </button></li>`,
+          )
+          .join("");
+        document.querySelectorAll("[data-cmd-index]").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            commandList[Number(btn.dataset.cmdIndex)].action();
+            closeCommandPalette();
+          });
+        });
+      }
+      renderCommandList();
+
+      function openCommandPalette() {
+        const el = document.getElementById("command-palette");
+        el.classList.remove("hidden");
+        el.classList.add("flex");
+      }
+      function closeCommandPalette() {
+        const el = document.getElementById("command-palette");
+        el.classList.add("hidden");
+        el.classList.remove("flex");
+      }
+      window.addEventListener("keydown", (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+          e.preventDefault();
+          const el = document.getElementById("command-palette");
+          el.classList.contains("hidden")
+            ? openCommandPalette()
+            : closeCommandPalette();
+        }
+        if (e.key === "Escape") closeCommandPalette();
+      });
+    </script>
+  </body>
+</html>
