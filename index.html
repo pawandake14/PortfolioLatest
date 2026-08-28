@@ -381,7 +381,7 @@
           <div class="flex items-center gap-2">
             <a
               id="cv-link-desktop"
-              href="resume.pdf"
+              href="PawanDakeFSDResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="hidden items-center gap-2 rounded-full border border-purple/50 px-4 py-2 text-sm font-semibold text-text-primary shadow-[0_0_15px_rgba(139,92,246,0.25)] transition-all hover:border-purple hover:shadow-glow sm:inline-flex"
@@ -467,7 +467,7 @@
               Contact
             </button>
             <a
-              href="resume.pdf"
+              href="PawanDakeFSDResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="mt-1 flex items-center justify-center gap-2 rounded-xl border border-purple/50 px-4 py-3 text-sm font-semibold text-text-primary"
@@ -1624,7 +1624,7 @@
           leetcode: "https://leetcode.com/u/pawandake14/",
           email: "pawandake12@gmail.com",
         },
-        resumePath: "resume.pdf",
+        resumePath: "PawanDakeFSDResume.pdf",
         leetcodeSolved: 50,
         projects: {
           electroArts: {
@@ -2204,7 +2204,7 @@
       async function getVisitorCount() {
         try {
           // hits.sh requires a domain format. Replace pawandake.tech with your actual custom domain.
-          const res = await fetch("https://hits.sh/pawandake.tech.json");
+          const res = await fetch("https://pawan-dake.netlify.app");
           if (res.ok) {
             const data = await res.json();
             return { count: data.count, isLive: true };
